@@ -6,12 +6,12 @@ public class Main{
 
         
         System.out.print("Enter a number to reverse: ");
-        int number = scanner.nextInt(); // Read the input number
+        int number = scanner.nextInt(); 
         int reversedNumber = 0; 
         do {
-            int lastDigit = number % 10; // Get the last digit
-            reversedNumber = (reversedNumber * 10) + lastDigit; // Append the last digit to reversedNumber
-            number = number / 10; // Remove the last digit from number
+            int lastDigit = number % 10; 
+            reversedNumber = (reversedNumber * 10) + lastDigit;
+            number = number / 10;
         } while (number > 0);
         System.out.println("Reversed Number: " + reversedNumber);
         scanner.close();
