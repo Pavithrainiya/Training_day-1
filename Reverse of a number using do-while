@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a number
+        System.out.print("Enter a number to reverse: ");
+        int number = scanner.nextInt(); // Read the input number
+        int reversedNumber = 0; // Initialize the reversed number to 0
+        
+        // Reverse the number using a do-while loop
+        do {
+            int lastDigit = number % 10; // Get the last digit
+            reversedNumber = (reversedNumber * 10) + lastDigit; // Append the last digit to reversedNumber
+            number = number / 10; // Remove the last digit from number
+        } while (number > 0); // Continue until number becomes 0
+
+        // Display the reversed number
+        System.out.println("Reversed Number: " + reversedNumber);
+
+        // Close the Scanner object
+        scanner.close();
+    }
+}
